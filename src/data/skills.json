@@ -1,0 +1,17 @@
+[
+  { "name": "React.js", "icon": "react" },
+  { "name": "Next.js", "icon": "nextjs" },
+  { "name": "JavaScript", "icon": "javascript" },
+  { "name": "Tailwind CSS", "icon": "tailwind" },
+  { "name": "MySQL", "icon": "mysql" },
+  { "name": "PostgreSQL", "icon": "postgresql" },
+  { "name": "Python", "icon": "python" },
+  { "name": "FastAPI", "icon": "fastapi" },
+  { "name": "Django REST Framework", "icon": "django" },
+  { "name": "TensorFlow", "icon": "tensorflow" },
+  { "name": "PyTorch", "icon": "pytorch" },
+  { "name": "REST API", "icon": "api" },
+  { "name": "AWS", "icon": "aws" },
+  { "name": "Docker", "icon": "docker" },
+  { "name": "Git", "icon": "git" }
+]
