@@ -1,24 +1,22 @@
-# Photography Portfolio
+# Balla Manish Ranganatha Chowdary - Portfolio
 
-A modern photography portfolio website built with Next.js 16 as a fully static site. This portfolio showcases developer work, skills, and projects with a clean, responsive design.
+A modern, fully static portfolio website showcasing my work as an AI Full Stack Developer. Built with Next.js 16 and designed for optimal performance and accessibility.
 
 ## 🚀 Features
 
 - **Next.js 16** with React 19 and React Compiler
 - **Static Site Generation** - No server required, deploy anywhere
-- **Interactive Maps** with Mapbox GL JS integration
-- **Modern UI** built with Tailwind CSS and shadcn/ui components
 - **Responsive Design** optimized for all devices
 - **Dark Mode** support with theme toggle
 - **Resume Download** functionality
 - **Local Data Management** with JSON files
+- **Modern UI** built with Tailwind CSS and shadcn/ui components
 
 ## 📋 Prerequisites
 
 Before deploying, ensure you have:
 
 - **Node.js 18+** or **Bun** runtime
-- **Mapbox** account for map features (optional)
 - A static hosting platform (GitHub Pages, Vercel, Netlify, Cloudflare Pages, etc.)
 
 ## 🛠️ Local Development
@@ -31,44 +29,29 @@ git clone https://github.com/Balla-Manish-Ranganatha-Chowdary/portfolio.git
 cd portfolio
 
 # Install dependencies
-bun install
-# or
 npm install
+# or
+bun install
 ```
 
-### Step 2: Environment Configuration (Optional)
-
-If you want to use Mapbox features, create a `.env.local` file:
-
-```env
-# Mapbox access token (optional)
-NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN=pk.your-mapbox-token
-```
-
-**Get Mapbox Token:**
-
-1. Create account at [mapbox.com](https://mapbox.com)
-2. Go to Account > Access Tokens
-3. Create a new token with appropriate scopes
-
-### Step 3: Run Development Server
+### Step 2: Run Development Server
 
 ```bash
 # Start development server
-bun run dev
-# or
 npm run dev
+# or
+bun run dev
 ```
 
 Visit `http://localhost:3000` to view your portfolio.
 
-### Step 4: Build and Test Locally
+### Step 3: Build and Test Locally
 
 ```bash
 # Build the static site
-bun run build
-# or
 npm run build
+# or
+bun run build
 
 # Preview the production build
 npx serve@latest out
@@ -96,7 +79,7 @@ Edit `src/data/profile.json`:
   "name": "Your Name",
   "title": "Your Title",
   "bio": "Your bio text",
-  "avatar": "/avatar.jpg",
+  "avatar": "/profile-pic.png",
   "social": {
     "github": "your-github-username",
     "email": "your@email.com",
@@ -116,9 +99,9 @@ Edit `src/data/projects.json`:
     "title": "Project Title",
     "description": "Project description",
     "image": "/projects/project-1.webp",
-    "technologies": ["React", "Next.js", "TypeScript"],
+    "technologies": ["React.js", "FastAPI", "MySQL"],
     "github": "https://github.com/username/repo",
-    "demo": "https://demo-url.com"
+    "demo": "#"
   }
 ]
 ```
@@ -136,11 +119,17 @@ Edit `src/data/skills.json`:
     "icon": "react"
   },
   {
-    "name": "Next.js",
-    "icon": "nextjs"
+    "name": "Python",
+    "icon": "python"
   }
 ]
 ```
+
+### Updating Profile Picture
+
+1. Replace the file at `/public/profile-pic.png` with your photo
+2. Keep the filename as `profile-pic.png` to maintain consistency
+3. Rebuild and redeploy the site
 
 ### Updating Resume PDF
 
@@ -151,7 +140,7 @@ Edit `src/data/skills.json`:
 After updating any data files, rebuild the site to see changes:
 
 ```bash
-bun run build
+npm run build
 ```
 
 ## 🚀 Deployment Guide
@@ -199,7 +188,7 @@ vercel --prod
 ```typescript
 const nextConfig = {
   output: 'export',
-  basePath: '/your-repo-name',
+  basePath: '/portfolio',
   images: {
     unoptimized: true,
   },
@@ -244,36 +233,12 @@ jobs:
    - **Build output directory:** `out`
 6. Click "Save and Deploy"
 
-### Custom Domain Setup
-
-After deploying, you can add a custom domain:
-
-**Vercel:**
-- Go to Project Settings > Domains
-- Add your custom domain
-- Configure DNS records as instructed
-
-**Netlify:**
-- Go to Site Settings > Domain Management
-- Add custom domain
-- Follow DNS configuration steps
-
-**GitHub Pages:**
-- Go to Repository Settings > Pages
-- Add custom domain in "Custom domain" field
-- Configure DNS with CNAME record
-
-**Cloudflare Pages:**
-- Go to your Pages project > Custom domains
-- Add your domain
-- DNS is automatically configured if domain is on Cloudflare
-
 ## 🛠 Tech Stack
 
 - **Framework:** Next.js 16 with React 19
 - **Styling:** Tailwind CSS + shadcn/ui components
 - **Animations:** Framer Motion
-- **Maps:** Mapbox GL JS (optional)
+- **Icons:** react-icons
 - **Language:** TypeScript
 - **Deployment:** Static export (no server required)
 
@@ -298,10 +263,10 @@ rm -rf .next
 
 # Reinstall dependencies
 rm -rf node_modules
-bun install
+npm install
 
 # Try building again
-bun run build
+npm run build
 ```
 
 #### Images Not Loading
@@ -310,11 +275,11 @@ bun run build
 - Check image paths in JSON data files match actual file locations
 - Ensure image filenames are correct (case-sensitive)
 
-#### Map Not Loading
+#### Profile Picture Not Showing
 
-- Verify Mapbox token is valid (if using maps)
-- Check token permissions and scopes
-- Ensure `NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN` is set in environment
+- Verify `profile-pic.png` exists in `/public` directory
+- Check file permissions
+- Clear browser cache and try again
 
 #### Resume Download Not Working
 
@@ -328,7 +293,6 @@ bun run build
 - [Next.js Static Exports](https://nextjs.org/docs/app/building-your-application/deploying/static-exports)
 - [Vercel Deployment Guide](https://vercel.com/docs)
 - [Netlify Deployment Guide](https://docs.netlify.com)
-- [Mapbox Documentation](https://docs.mapbox.com)
 
 ## 🤝 Contributing
 
@@ -351,5 +315,7 @@ If you find this project helpful, please give it a ⭐️ on GitHub!
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ---
+
+**Built with ❤️ by Balla Manish Ranganatha Chowdary**
 
 **Need help?** Check the troubleshooting section above or open an issue in the repository.
